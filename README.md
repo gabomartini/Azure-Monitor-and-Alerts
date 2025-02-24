@@ -48,7 +48,7 @@ In this task, you create an alert for when a virtual machine is deleted.
 <img src="https://github.com/user-attachments/assets/b1696df6-0fcd-4d44-a6ea-f6ef1d6a794a">
 </p>
 
-8.	In the Alert logic area (scroll down), review the Event level selections and the Status selections.
+8.	In the Alert logic area (scroll down), review the "Event level" and the "Status" selections.
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/d4f1fe73-5a57-459a-9373-a1fca215375f">
@@ -97,7 +97,7 @@ In this task, we trigger the alert and confirm a notification is sent.
 </p>
 
 4.	In the title bar, select the Notifications icon and wait until the Virtual Machine is successfully deleted.
-5.	The Operations Group should receive a notification email that reads, Important notice: Azure Monitor alert VM was deleted was activated.
+5.	The Operations Group should receive a notification email stating: "Important notice: Azure Monitor alert VM was deleted was activated.".
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/0f5c1611-55c3-4546-a6dd-94077cc5b1d0">
@@ -121,13 +121,13 @@ In this task, we create an alert rule to suppress notifications during a mainten
 <img src="https://github.com/user-attachments/assets/bee6d5f1-6f84-47c1-9b50-5d18a1612bab">
 </p>
 
-4.	By default, the rule works all the time, unless we disable it or configure a schedule. We are going to define a rule to suppress notifications during overnight maintenance. We will enter the following settings for the scheduling of the alert processing rule:
+4.	By default, the rule runs continuously unless disabled or scheduled otherwise. We are going to define a rule to suppress notifications during overnight maintenance. We will enter the following settings for the scheduling of the alert processing rule:
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/4ea3dc08-955f-4ba7-b8b1-d31954542207">
 </p>
 
-5.	Select "Next: Details >" and enter these settings after Suscription and Resource Group: Rule name	"Planned Maintenance" and Description	"Suppress notifications during planned maintenance.".
+5.	Select "Next: Details >" and enter these settings after Subscription and Resource Group: Rule name	"Planned Maintenance" and Description	"Suppress notifications during planned maintenance.".
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/45ed3a6c-d6fe-43c5-997f-d4c3462010a6">
@@ -138,7 +138,7 @@ In this task, we create an alert rule to suppress notifications during a mainten
 ## Task 5: Use Azure Monitor log queries.
 In this task, you will use Azure Monitor to query the data captured from the virtual machine.
 
-1.	In the Azure portal, search for and select Monitor blade, click "Logs".
+1.	In the Azure portal, search for and select Monitor blade, then click "Logs".
 2.	Select a scope, your Resource group, and select "Apply".
 
 <p align="center">
@@ -158,7 +158,7 @@ In this task, you will use Azure Monitor to query the data captured from the vir
 <img src="https://github.com/user-attachments/assets/e830c309-7cd2-43bb-90c5-3e463a36e552">
 </p>
 
-8.	Replace the query with this one, and then click Run. Review the resulting chart.
+8.	Replace the query with the following one, then click 'Run'. Review the resulting chart.
 
 InsightsMetrics
 
