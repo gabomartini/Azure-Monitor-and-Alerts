@@ -57,13 +57,13 @@ In this task, you create an alert for when a virtual machine is deleted.
 ## Task 2: Configure notifications for an action group.
 In this task, when the alert is triggered, the configuration will send an email notification to the operations team.
 
-1.	In the Create an alert rule pane select "Next: Actions", choose Use action groups then "+ Create" action group. You can add up to five action groups to an alert rule.
+1.	In the Create an alert rule pane select "Next: Actions >", choose Use action groups then "+ Create" action group. You can add up to five action groups to an alert rule.
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/d1444a1b-8ecb-4dac-82e8-4df23ecfaccd">
 </p>
 
-2.	On the Basics tab, configure Subscription, Resource group, Action group name (in this case "Alert the operations team"), and Display name (in this case "AlertOpsTeam"), then click "Next: Notifications" and set Notification type (here we reach the team via Email) and Name (this will be the title of the message). The group should receive an email notification saying they were added to an action group. 
+2.	On the Basics tab, configure Subscription, Resource group, Action group name (in this case "Alert the operations team"), and Display name (in this case "AlertOpsTeam"), then click "Next: Notifications >" and set Notification type (here we reach the team via Email) and Name (this will be the title of the message). The group should receive an email notification saying they were added to an action group. 
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/5906e7ae-d47f-4d2d-9657-cbc190c7f4ed">
@@ -77,7 +77,7 @@ In this task, when the alert is triggered, the configuration will send an email 
 <img src="https://github.com/user-attachments/assets/0cf798b8-ec7b-4737-8b94-969c0e7b9f19">
 </p>
 
-3.	Select "Review + create" then "Create". Once the action group is created move to the "Next: Details" tab and enter the following values for each setting: Alert rule name	"VM was deleted" and Alert rule description	"A VM in your resource group was deleted"
+3.	Select "Review + create" then "Create". Once the action group is created move to the "Next: Details >" tab and enter the following values for each setting: Alert rule name	"VM was deleted" and Alert rule description	"A VM in your resource group was deleted"
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/e79e2bb5-fda2-40a5-9994-80742019c521">
@@ -115,7 +115,7 @@ In this task, we create an alert rule to suppress notifications during a mainten
 
 1.	Continue in the Alerts blade, click "+ Create" and select "Alert processing rules".
 2.	Select your Resource group then select "Apply".
-3.	Select "Next: Rule settings", then select "Suppress notifications". Select "Next: Scheduling".
+3.	Select "Next: Rule settings >", then select "Suppress notifications". Select "Next: Scheduling >".
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/bee6d5f1-6f84-47c1-9b50-5d18a1612bab">
@@ -127,17 +127,13 @@ In this task, we create an alert rule to suppress notifications during a mainten
 <img src="https://github.com/user-attachments/assets/4ea3dc08-955f-4ba7-b8b1-d31954542207">
 </p>
 
-6.	Select Next: Details and enter these settings:
-SETTING	VALUE
-Resource group	AZ-104-Module11
-Rule name	Planned Maintenance
+5.	Select "Next: Details >" and enter these settings after Suscription and Resource Group: Rule name	"Planned Maintenance" and Description	"Suppress notifications during planned maintenance.".
 
-Description	Suppress notifications during planned maintenance.
+<p align="center">
+<img src="https://github.com/user-attachments/assets/45ed3a6c-d6fe-43c5-997f-d4c3462010a6">
+</p>
 
-8.	Select Review + create to validate your input, then select Create.
-
-
-
+6.	Select "Review + create" to validate your input, then select "Create".
 
 ## Task 5: Use Azure Monitor log queries.
 In this task, you will use Azure Monitor to query the data captured from the virtual machine.
