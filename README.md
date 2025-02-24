@@ -17,6 +17,7 @@
  2. Configure notifications for an action group.
  3. Trigger and validate an alert.
  4. Set up an alert processing rule.
+ 5. Use Azure Monitor log queries.
 
 ## Task 1: Set up an alert using Azure Monitor.
 In this task, you create an alert for when a virtual machine is deleted.
@@ -134,8 +135,13 @@ Rule name	Planned Maintenance
 Description	Suppress notifications during planned maintenance.
 
 8.	Select Review + create to validate your input, then select Create.
-Task 6: Use Azure Monitor log queries
+
+
+
+
+## Task 5: Use Azure Monitor log queries.
 In this task, you will use Azure Monitor to query the data captured from the virtual machine.
+
 1.	In the Azure portal, search for and select Monitor blade, click Logs.
 2.	If necessary close the splash screen.
 3.	Select a scope, your Resource group, AZ-104-Module11 then select Apply.
