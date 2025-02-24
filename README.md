@@ -31,7 +31,7 @@ In this task, you create an alert for when a virtual machine is deleted.
 </p>
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/1bf9ed4c-65a1-4447-84f7-5126999ddbc5">
+<img src="https://github.com/user-attachments/assets/701f8c84-98b2-4903-aaa2-3f1f64b6a0e0">
 </p>
 
 4.	Use your desired subscription and data collection rules, then select "Configure". It will take a few minutes for the virtual machine agent to install and configure.
@@ -138,28 +138,34 @@ In this task, we create an alert rule to suppress notifications during a mainten
 ## Task 5: Use Azure Monitor log queries.
 In this task, you will use Azure Monitor to query the data captured from the virtual machine.
 
-1.	In the Azure portal, search for and select Monitor blade, click Logs.
-2.	If necessary close the splash screen.
-3.	Select a scope, your Resource group, AZ-104-Module11 then select Apply.
+1.	In the Azure portal, search for and select Monitor blade, click "Logs".
+2.	Select a scope, your Resource group, and select "Apply".
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/577e6179-ac5a-443b-ac93-802479ffa52e">
+</p>
+
 4.	In the Queries tab, select Virtual machines (left pane).
-5.	Review the queries that are available. Run (hover over the query) the Count heartbeats query.
-6.	You should receive a heartbeat count for when the virtual machine was running.
-7.	Review the query. This query uses the heartbeat table.
+6.	Run (hover over the query) the Count heartbeats query.
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/69283c96-1dec-4810-8277-b0af2774ee66">
+</p>
+
+7.	You should receive a heartbeat count for when the virtual machine was running. This query uses the heartbeat table.
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/e830c309-7cd2-43bb-90c5-3e463a36e552">
+</p>
+
 8.	Replace the query with this one, and then click Run. Review the resulting chart.
-9.	 InsightsMetrics
-10.	 | where TimeGenerated > ago(1h)
-11.	 | where Name == "UtilizationPercentage"
-12.	 | summarize avg(Val) by bin(TimeGenerated, 5m), Computer //split up by computer
-13.	 | render timechart
-14.	As you have time, review and run other queries.
 
+InsightsMetrics
+	 | where TimeGenerated > ago(1h)
+	 | where Name == "UtilizationPercentage"
+	 | summarize avg(Val) by bin(TimeGenerated, 5m), Computer //split up by computer
+	 | render timechart
 
-
-
-
-
-
-
-
-
-
+<p align="center">
+<img src="https://github.com/user-attachments/assets/ae3bc98e-06a5-41a3-99dc-230895dde03b">
+</p>
