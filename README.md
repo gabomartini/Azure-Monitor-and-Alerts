@@ -161,10 +161,14 @@ In this task, you will use Azure Monitor to query the data captured from the vir
 8.	Replace the query with this one, and then click Run. Review the resulting chart.
 
 InsightsMetrics
-	 | where TimeGenerated > ago(1h)
-	 | where Name == "UtilizationPercentage"
-	 | summarize avg(Val) by bin(TimeGenerated, 5m), Computer //split up by computer
-	 | render timechart
+
+  | where TimeGenerated > ago(1h)
+
+  | where Name == "UtilizationPercentage"
+
+  | summarize avg(Val) by bin(TimeGenerated, 5m), Computer //split up by computer
+
+  | render timechart
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/ae3bc98e-06a5-41a3-99dc-230895dde03b">
