@@ -19,6 +19,8 @@
  4. Set up an alert processing rule.
 
 ## Task 1: Set up an alert using Azure Monitor.
+In this task, you create an alert for when a virtual machine is deleted.
+
 1.	In the Azure portal, search for and select "Monitor".
 2.	Select "View" in the VM Insights box, and then select "Configure Insights".
 3.	Select your virtual machine, and then "Enable" (twice).
@@ -31,25 +33,89 @@
 <img src="https://github.com/user-attachments/assets/1bf9ed4c-65a1-4447-84f7-5126999ddbc5">
 </p>
 
-5.	Use your desired subscription and data collection rules, then select "Configure". It will take a few minutes for the virtual machine agent to install and configure.
+4.	Use your desired subscription and data collection rules, then select "Configure". It will take a few minutes for the virtual machine agent to install and configure.
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/4c9c317d-a5a2-4f5a-9def-6dc5f1ecc1fc">
 </p>
 
-6.	Continue on the Monitor page , select "Alerts". Select "Create +" and select "Alert rule".
-7.	Select the box for the resource group, then select Apply. This alert will apply to any virtual machines in the resource group. Alternatively, you could just specify one particular machine.
-8.	Select the Condition tab and then select the "See all signals" link. Search for and select Delete Virtual Machine (Virtual Machines) and Select "Apply".
+5.	Continue on the Monitor page , select "Alerts". Select "Create +" and select "Alert rule".
+6.	Select the box for the resource group, then select Apply. This alert will apply to any virtual machines in the resource group. Alternatively, you could just specify one particular machine.
+7.	Select the Condition tab and then select the "See all signals" link. Search for and select "Delete Virtual Machine (Virtual Machines)" and Select "Apply".
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/b1696df6-0fcd-4d44-a6ea-f6ef1d6a794a">
 </p>
 
-12.	In the Alert logic area (scroll down), review the Event level selections and the Status selections. Leave the default of All selected.
+8.	In the Alert logic area (scroll down), review the Event level selections and the Status selections.
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/d4f1fe73-5a57-459a-9373-a1fca215375f">
 </p>
+
+## Task 2: Configure notifications for an action group.
+In this task, when the alert is triggered, the configuration will send an email notification to the operations team.
+
+1.	In the Create an alert rule pane select "Next: Actions", choose Use action groups then "+ Create" action group. You can add up to five action groups to an alert rule.
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/d1444a1b-8ecb-4dac-82e8-4df23ecfaccd">
+</p>
+
+2.	On the Basics tab, configure Subscription, Resource group, Action group name (in this case "Alert the operations team"), and Display name (in this case "AlertOpsTeam"), then click "Next: Notifications" and set Notification type (here we reach the team via Email) and Name (this will be the title of the message). The group should receive an email notification saying they were added to an action group. 
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/5906e7ae-d47f-4d2d-9657-cbc190c7f4ed">
+</p>
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/b8ac33cd-415d-4943-9643-6cd3ac527a83">
+</p>
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/0cf798b8-ec7b-4737-8b94-969c0e7b9f19">
+</p>
+
+3.	Select "Review + create" then "Create". Once the action group is created move to the "Next: Details" tab and enter the following values for each setting: Alert rule name	"VM was deleted" and Alert rule description	"A VM in your resource group was deleted"
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/e79e2bb5-fda2-40a5-9994-80742019c521">
+</p>
+
+4.	Select "Review + create" to validate your input, then select "Create".
+
+## Task 3: Trigger and validate an alert.
+In this task, we trigger the alert and confirm a notification is sent.
+
+1.  In the Azure portal, search for and select "Virtual machines".
+2.	Check the box for a virtual machine in the resource group configured for the alert.
+3.	Select Delete from the menu bar. Check the box for Apply force delete. Check the box at the bottom confirming that you want the resources to be deleted and select Delete.
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/ddca69fa-c19a-4759-a0c3-8846cc0568b9">
+</p>
+
+4.	In the title bar, select the Notifications icon and wait until the Virtual Machine is successfully deleted.
+5.	The Operations Group should receive a notification email that reads, Important notice: Azure Monitor alert VM was deleted was activated.
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/0f5c1611-55c3-4546-a6dd-94077cc5b1d0">
+</p>
+
+6.	On the Azure portal resource menu, select Monitor, and then select Alerts in the menu on the left.
+7.	You should have three verbose alerts that were generated by deleting the Virtual Machine. Note: It can take a few minutes for the alert email to be sent and for the alerts to be updated in the portal.
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/fd789c61-d756-4204-9717-55d32d6d0997">
+</p>
+
+## Task 4: Set up an alert processing rule.
+In this task, we create an alert rule to suppress notifications during a maintenance period.
+
+
+
+
+
 
 
 
