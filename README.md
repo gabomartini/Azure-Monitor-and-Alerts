@@ -10,8 +10,6 @@
 
 *- Perform queries with Log Analytics.*
 
-*- Work with Network Watcher.*
-
 #### Tasks:
  1. Set up an alert using Azure Monitor.
  2. Configure notifications for an action group.
