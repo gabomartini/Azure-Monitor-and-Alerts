@@ -4,11 +4,11 @@
 </p>
 
 #### *In this tutorial, we will:*
-*- Leverage Azure Monitor.*
+*•	Leverage Azure Monitor to track resource activity.*
 
-*- Set up Azure alerts.*
+*•	Set up Azure alerts to notify teams of critical events.*
 
-*- Perform queries with Log Analytics.*
+*•	Perform queries with Log Analytics to analyze data.*
 
 #### Tasks:
  1. Set up an alert using Azure Monitor.
